@@ -1,26 +1,18 @@
 package ru.biybinaz.springpj;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
 import java.util.ArrayList;
 import java.util.List;
-
+@Component
 public class MusiPlayer {
-    private Music music;
-
-    public MusiPlayer(Music music) {
-        this.music = music;
+    private ClassicalMusic classicalMusic;
+@Autowired
+    public MusiPlayer(ClassicalMusic classicalMusic) {
+        this.classicalMusic = classicalMusic;
     }
-
-    public MusiPlayer() {
-
-    }
-
-    public void setMusic(Music music) {
-        this.music = music;
-    }
-
     public void playMusic() {
-
-        System.out.println("Playing: " + music.getSong());
-
+        System.out.println("Playing: " + classicalMusic.getSong());
     }
 }

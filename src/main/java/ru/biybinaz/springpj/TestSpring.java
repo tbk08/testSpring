@@ -20,8 +20,15 @@ public class TestSpring {
         System.out.println(musiPlayer.getName());
         System.out.println(musiPlayer.getVolume());*/
 
+        // singleton and prototype
         MusiPlayer musicPlayer = context.getBean("musicPlayer", MusiPlayer.class);
-        musicPlayer.playMusic();
+        MusiPlayer musicPlayer1 = context.getBean("musicPlayer", MusiPlayer.class);
+        System.out.println(musicPlayer1);
+        System.out.println(musicPlayer);
+        musicPlayer1.setVolume(12);
+        System.out.println(musicPlayer1.getVolume());
+        System.out.println(musicPlayer.getVolume());
+
         context.close();
     }
 }

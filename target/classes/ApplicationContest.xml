@@ -10,20 +10,12 @@
     <bean id="musicBean"
           class="ru.biybinaz.springpj.RockMusic">
     </bean>
-    <bean id="musicBean2"
-          class="ru.biybinaz.springpj.ClassicalMusic">
-    </bean>
+
     <bean id="musicPlayer"
-        class = "ru.biybinaz.springpj.MusiPlayer">
-        <constructor-arg ref="musicBean"/>
-    </bean>
-    <bean id="musicPlayer2"
-        class = "ru.biybinaz.springpj.MusiPlayer">
-        <constructor-arg ref="musicBean2"/>
-    </bean>
-    <bean id="musicPlayer3"
           class = "ru.biybinaz.springpj.MusiPlayer">
         <property name="music" ref="musicBean"/>
+        <property name="name" value="Some name"/>
+        <property name="volume" value="50"/>
     </bean>
 
 </beans>

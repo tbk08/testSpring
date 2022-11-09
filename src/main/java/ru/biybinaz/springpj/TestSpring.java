@@ -18,10 +18,8 @@ public class TestSpring {
 
         MusiPlayer musiPlayer = context.getBean("musicPlayer", MusiPlayer.class);
         musiPlayer.playMusic();
-        MusiPlayer musiPlayer2 = context.getBean("musicPlayer2", MusiPlayer.class);
-        musiPlayer2.playMusic();
-        MusiPlayer musiPlayer3 = context.getBean("musicPlayer3", MusiPlayer.class);
-        musiPlayer3.playMusic();
+        System.out.println(musiPlayer.getName());
+        System.out.println(musiPlayer.getVolume());
 
         context.close();
     }

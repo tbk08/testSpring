@@ -12,8 +12,8 @@
     </bean>
     <bean id="musicPlayer"
           class="ru.biybinaz.springpj.ClassicalMusic"
-          init-method="doMyInit"
-          destroy-method="doMyDestroy">
+          factory-method="getClassM"
+    >
 
     </bean>
 </beans>

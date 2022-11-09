@@ -33,6 +33,7 @@ public class TestSpring {
         // init and destroy method
     ClassicalMusic classicalMusic = context.getBean("musicPlayer", ClassicalMusic.class);
         System.out.println(classicalMusic.getSong());
+
         context.close();
     }
 }

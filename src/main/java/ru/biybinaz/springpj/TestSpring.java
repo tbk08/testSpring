@@ -19,7 +19,7 @@ public class TestSpring {
         musiPlayer.playMusic();
         System.out.println(musiPlayer.getName());
         System.out.println(musiPlayer.getVolume());*/
-
+    /*
         // singleton and prototype
         MusiPlayer musicPlayer = context.getBean("musicPlayer", MusiPlayer.class);
         MusiPlayer musicPlayer1 = context.getBean("musicPlayer", MusiPlayer.class);
@@ -29,6 +29,10 @@ public class TestSpring {
         System.out.println(musicPlayer1.getVolume());
         System.out.println(musicPlayer.getVolume());
 
+    */
+        // init and destroy method
+    ClassicalMusic classicalMusic = context.getBean("musicPlayer", ClassicalMusic.class);
+        System.out.println(classicalMusic.getSong());
         context.close();
     }
 }

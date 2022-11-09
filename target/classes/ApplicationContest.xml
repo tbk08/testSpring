@@ -11,11 +11,9 @@
           class="ru.biybinaz.springpj.RockMusic">
     </bean>
     <bean id="musicPlayer"
-          class="ru.biybinaz.springpj.MusiPlayer"
-          scope="prototype">
+          class="ru.biybinaz.springpj.ClassicalMusic"
+          init-method="doMyInit"
+          destroy-method="doMyDestroy">
 
-        <property name="music" ref="musicBean"/>
-        <property name="name" value="${musicPlayer.name}"/>
-        <property name="volume" value="${musicPlayer.voluem}"/>
     </bean>
 </beans>

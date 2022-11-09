@@ -7,6 +7,14 @@ public class TestSpring {
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(
                 "ApplicationContest.xml"
         );
+
+        Music music = context.getBean("someClassicalMusic",Music.class);
+        MusiPlayer musiPlayer = new MusiPlayer(music);
+        musiPlayer.playMusic();
+        Music music1 = context.getBean("rockMusic",Music.class);
+        MusiPlayer musiPlayer1 = new MusiPlayer(music1);
+        musiPlayer1.playMusic();
+        context.close();
       /*
         Music music = context.getBean("musicBean", Music.class);
         MusiPlayer musiPlayer=new MusiPlayer(music);
@@ -31,9 +39,9 @@ public class TestSpring {
 
     */
         // init and destroy method
-    ClassicalMusic classicalMusic = context.getBean("musicPlayer", ClassicalMusic.class);
-        System.out.println(classicalMusic.getSong());
+   /*
+   ClassicalMusic = context.getBean("musicPlayer", ClassicalMusic.class);
+        System.out.println(classicalMusic.getSong());*/
 
-        context.close();
     }
 }

@@ -1,18 +1,10 @@
 package ru.biybinaz.springpj;
 
-public class ClassicalMusic implements Music{
-    private ClassicalMusic(){
+import org.springframework.stereotype.Component;
 
-    }
-    public static ClassicalMusic getClassM(){
-        return new ClassicalMusic();
-    }
-    public void doMyInit(){
-        System.out.println("doing init");
-    }
-    public void doMyDestroy(){
-        System.out.println("doing destruction");
-    }
+@Component("someClassicalMusic")
+public class ClassicalMusic implements Music{
+//annotation component
     @Override
     public String getSong() {
         return "Shopen";
